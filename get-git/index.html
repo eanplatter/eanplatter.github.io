@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=13a8bb5406" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css?v=2db5656b3e" />
 
     <meta name="generator" content="Ghost 0.5" />
 <link rel="alternate" type="application/rss+xml" title="ean" href="../rss/index.html">
@@ -63,6 +63,22 @@
 
 <p>This command stands for <strong>Change Directory</strong>. This is how we move around and through files. Typing this command all by itself directs your terminal to the root directory of your computer.</p>
 
+<p>To confirm we are in the root directory we can type the command:</p>
+
+<p><code>$ ls </code></p>
+
+<p><strong>ls</strong> allows us to list out the files and folders in the directory we are currently in. It's a great command for double checking that you're in the right spot. </p>
+
+<p>Another way to find out where you are in your files is by typing:</p>
+
+<p><code>$ pwd </code></p>
+
+<p><strong>pwd</strong> shows us a trail of our current location. When I type it in my root folder, I get:</p>
+
+<p><code>/Users/eanplatter</code></p>
+
+<p>We should be able to type <code>$ ls </code> in our root and see a folder named Desktop.</p>
+
 <p>Let's get to our Desktop by typing: <br />
 <code>$ cd Desktop </code></p>
 
@@ -71,6 +87,8 @@
 <p><code>$ mkdir my-git-project </code></p>
 
 <p>The command <code>mkdir</code> stands for <strong>Make Directory</strong> or in other words a folder. We also named the directory "my-git-project".</p>
+
+<p>We can now type  <code>$ ls </code> to make sure our project folder was created. </p>
 
 <p>Let's enter the directory: </p>
 
@@ -82,6 +100,8 @@
 <code>$ touch main.css  </code></p>
 
 <p>The <code>touch</code> command allows us to create a new file. <strong>Index.html</strong> is a special file that tells our browser that it's the main hub of our code. <strong>main.css</strong> is where we will store our styles. </p>
+
+<p>After we create our files we can type <code>$ ls </code> which should show our new files in our directory. </p>
 
 <h1 id="2writesomecode">2. Write some code</h1>
 
@@ -113,6 +133,7 @@ index.html  </p>
 <pre><code class=" css">.container {
     background: #D6D6D6;
     font-family: sans-serif;
+}
 </code></pre>
 
 <p>Now back to our terminal to view our website. In the terminal type the command:</p>
@@ -128,6 +149,11 @@ index.html  </p>
 <p>First we'll initialize the app by typing in our terminal:</p>
 
 <p><code>$ git init </code></p>
+
+<p>When we type git init, git goes to work creating an entire folder full of files. These files track all of your commits and do a lot of other great things. </p>
+
+<p>If you type <code>$ ls -A </code> in your terminal you will see some files we didn't create. These are files that are created by the computer. One of them is the .git file. The .git file is created when we type <br />
+<code> $ git init</code> and is what tracks all of our code.</p>
 
 <p>Then we will check the status: </p>
 
@@ -180,6 +206,16 @@ and <br />
 <p><code>$ git status</code> <br />
 <code>$ git add  [NAMES OF RED FILES]</code> <br />
 <code>$ git commit -m "WHAT YOU WORKED ON" </code></p>
+
+<p><em>A note on git add / git commit</em><br>
+At first it can be hard to differentiate between <code>$ git add </code> and <br />
+<code>$ git commit </code>. </p>
+
+<p>The idea is that we are constantly changing files in our project. After we make a change to our file, the .git file notices and makes note of it. Once we are ready to commit, the <code>$ git status </code> command tells us which files it noticed we changed. </p>
+
+<p>Just because it noticed the change, doesn't mean it's going to save that file when we commit. </p>
+
+<p><code>$ git add [NAME OF FILE]</code>  allows us to tell git that we want to save the changes made to that file, while <code>$ git commit -m "COMMIT MESSAGE"</code> is doing the actual committing. </p>
 
 <h1 id="4bonusround">4. Bonus round</h1>
 
@@ -249,11 +285,11 @@ and <br />
         </p>
     </footer>
 
-    <script src="../public/jquery.js?v=13a8bb5406"></script>
+    <script src="../public/jquery.js?v=2db5656b3e"></script>
 
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=13a8bb5406"></script>
-    <script src="../assets/js/index.js?v=13a8bb5406"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=2db5656b3e"></script>
+    <script src="../assets/js/index.js?v=2db5656b3e"></script>
 </body>
 </html>
