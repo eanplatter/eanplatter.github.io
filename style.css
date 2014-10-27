@@ -9,13 +9,14 @@ a {
 
 .header {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .text-box {
   background: #FE2E2E;
   margin-top: 5%;
-  padding: 20px;
+  padding: 40px;
+  margin-top: 0px;
 }
 
 .button {
