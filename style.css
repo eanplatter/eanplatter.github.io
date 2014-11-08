@@ -1,5 +1,13 @@
 html {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h4{
+  margin: 20px;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -13,10 +21,10 @@ a {
 }
 
 .text-box {
-  background: #FE2E2E;
-  margin-top: 5%;
-  padding: 40px;
-  margin-top: 0px;
+  line-height: 50px;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
 }
 
 .button {
@@ -36,11 +44,32 @@ a {
 }
 
 .blue {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: right;
   background: #0080FF;
 }
 
-@media(max-width: 400px) {
+.square {
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);  
+  margin: 20px auto 70px auto;
+  height: 60px;
+  width: 60px;
+  border: 5px solid black;
+}
+
+.square p{
+  font-size: 30px;
+  -moz-transform:rotate(312deg);
+  -webkit-transform:rotate(315deg);
+  position: absolute;
+  left: 21px;
+  top: -18px;
+}
+
+/*@media(max-width: 400px) {
   html {
     background: #0080FF;
   }
@@ -64,5 +93,6 @@ a {
     background: #0080FF;
   }
 
-}
+}*/
+
 

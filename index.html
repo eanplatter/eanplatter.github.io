@@ -4,34 +4,34 @@
   <title>ean</title>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">  
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
   <meta name="viewport" content="width=device-width, initial-scale=1">  
 </head>
 <body>
-  <header class="header">
-    <h1>hello world.</h1>
-  </header>
-  <div class="text-box">
-    <h1>my name is ean</h1>
-    <p>and I am a front end engineer.</p>
-  </div>
-  <div class="text-box blue">
-    <h1>find me here</h1>
+  <div class="square pulse">
     <p>
+      E
+    </p>
+  </div>
+  <div class="text-box">
+    <p>
+      {name: "<span class="pulse">Ean Platter</span>", age: <span class="pulse">24</span>, occupation: "<span class="pulse">Front-End Engineer</span>", favoriteLanguage: "<span class="pulse">JavaScript</span>"} 
+    </p>
+    <hr>
+    <p>
+      {frameworks: [<span class="pulse">'AngularJS', 'ReactJS', 'Meteor', 'Mithril'</span>], libraries: ['<span class="pulse">jQuery', 'Underscore'</span>], familiarStacks: [<span class="pulse">'MEAN Stack', 'Ruby on Rails', 'Parse', 'Firebase'</span>]} 
+    </p>    
+  </div>
+  <div class="blue pulse">
+    <h1>find me here</h1>
+    <h4>
       <a class="button" href="https://medium.com/@eanplatter">blog</a>
       <a class="button" href="https://twitter.com/eanplatter">twitter</a>
       <a class="button" href="https://linkedin.com/in/eplatter">linkedIn</a>
-    </p>
+    </h4>
   </div>  
-
-
-<script>
-  console.log('you may need to refresh your browser to view the following content');
-  console.log('I work daily in the following front end technologies:');
-  console.table({'Front End Technologies' : ['JavaScript', 'jQuery', 'HTML', 'CSS', 'Sass', 'Stylus']});
-  console.log('I work professionally, and personally in the following frameworks:');
-  console.table({'Frameworks':['AngularJS', 'ReactJS', 'Ruby on Rails', 'Sails']});
-  console.log('I have experience working on the front end of the following back end technologies:');
-  console.table({'Back End Technologies': ['NodeJS', 'Express', 'MongoDB', 'MySQL']});
-</script> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>  
+  <script src="scripts.js"></script>
 </body>
 </html>
