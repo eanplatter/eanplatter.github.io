@@ -1,17 +1,14 @@
 $(document).ready(function() {
     var pulse = function() {
     $(".pulse").animate({ 
-      backgroundColor: '#2E9AFE',
-      color: "#FFF"
-    }, 5500, function() {
+      backgroundColor: '#d6d6d6'
+    }, 100, function() {
         $(".pulse").animate({
-            backgroundColor: '#FA5858',
-            color: "#FFF"
-        }, 5500, function(){
+            backgroundColor: '#424242'
+        }, 100, function(){
             $(".pulse").animate({
-                backgroundColor: '#2E9AFE',
-                color: "#FFF"
-            }, 5500, function() {
+                backgroundColor: '#d6d6d6'
+            }, 100, function() {
                 pulse();
             });
         });
