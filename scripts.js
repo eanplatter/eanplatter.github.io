@@ -6,13 +6,7 @@ $(document).ready(function() {
         $(".pulse").animate({
             backgroundColor: '#D41E26',
             color: "#fff"
-        }, 10000, function(){
-            $(".pulse").animate({
-                backgroundColor: '#94CCC9'
-            }, 10000, function() {
-                pulse();
-            });
-        });
+        }, 10000);
     })
 
   };
