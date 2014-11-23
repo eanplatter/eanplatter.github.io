@@ -5,7 +5,7 @@ $(document).ready(function() {
     }, 10000, function() {
         $(".pulse").animate({
             backgroundColor: '#D41E26',
-            color: "#94CCC9"
+            color: "#fff"
         }, 10000, function(){
             $(".pulse").animate({
                 backgroundColor: '#94CCC9'
