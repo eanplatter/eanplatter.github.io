@@ -1,2 +1,2 @@
-#Personal site.
+#Personal site
 
