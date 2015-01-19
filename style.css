@@ -45,7 +45,6 @@ a:hover {
 .button {
   border: 1px solid #FFF;
   padding: 5px;
-  border-radius: 5px;
   background: #FFF;
   -webkit-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -55,6 +54,7 @@ a:hover {
 .button:hover {
   transition: 1s;
   background: #FB5656;
+  border-radius: 3px;
   color: #FFF;
   border: 1px solid #FB5656;
 }
