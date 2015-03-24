@@ -1,0 +1,27 @@
+{
+  "name": "eanplatter.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eanplatter/eanplatter.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eanplatter/eanplatter.github.io/issues"
+  },
+  "homepage": "https://github.com/eanplatter/eanplatter.github.io",
+  "dependencies": {
+    "react": "^0.12.2",
+    "react-router": "^0.12.0"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.5.3"
+  }
+}
