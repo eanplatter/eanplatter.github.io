@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>ean</title>
   <body id='lolwat'>
-    HEY LOOK THERE'S THE WEB NOW!
+    <div id='lawl'>
+      HEY LOOK THERE'S THE WEB NOW!
+    </div>
     <script type="text/javascript">
       setInterval(function() {
         var body = document.getElementById("lolwat")
-        var c = body.style
-        c.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16)
-        c.fontSize = Math.random() * 100 + '%'
+        var words = document.getElementById("lawl")
+        var wordStylez = words.style
+        var bodyStylez = body.style
+        bodyStylez.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16)
+        wordStylez.fontSize = Math.random() * 100 + '%'
       }, 1000)
     </script>
   </body>
