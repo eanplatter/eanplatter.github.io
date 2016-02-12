@@ -7,8 +7,9 @@
     HEY LOOK THERE'S THE WEB NOW!
     <script type="text/javascript">
       setInterval(function() {
-        document.write('<h1>The time is</h1>')
-        document.write('<h1>'+ Date.now() +'</h1>')
+        var body = document.getElementsByTagName("body")
+        var c = body.style
+        c.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16)
       }, 1000)
     </script>
   </body>
