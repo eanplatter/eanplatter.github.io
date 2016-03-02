@@ -17,6 +17,26 @@
         bodyStylez.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16)
         wordStylez.fontSize = Math.random() * 400 + '%'
       }, 1000)
+  console.log.apply(console, [
+    ['Email', (function () {
+      var __ = String.fromCharCode.bind(String)
+      var $$ = [69, 97, 110, 80, 108, 97, 116, 116, 101, 114]
+      var _$ = $$.length
+
+      return $$.map(function (s, i) {
+        return __(s - _$)
+      })
+      .join('')
+    })(), '#0743CA'],
+    ['Github', 'https://github.com/davezuko', '#5FAB06'],
+  ]
+    .map(function (x) {
+      return ['%c ' + x[0] + ': ' + x[1], 'font-size: 1rem; color: ' + x[2]]
+    })
+    .reduce((function (acc, x) {
+      return [[acc[0], x[0]].join(' | ')].concat(acc.slice(1).concat(x[1]))
+    }))
+  )
       /*
         Hello, my name is Ean and I am a software engineer. Mostly front-end engineering, and by that I mean mostly
         JavaScript. I currently use React and Redux for building web application software. I enjoy learning new things
