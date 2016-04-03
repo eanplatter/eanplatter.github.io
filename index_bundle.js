@@ -27684,8 +27684,7 @@ _createClass(Level, [{
         } },
       _react2.default.createElement(_Laramir2.default, null),
       _react2.default.createElement(
-        'div',
-        { className: 'wizard' },
+        'h1',
         { style: { float: 'right', fontSize: '100px', fontFamily: 'sans-serif', fontWeight: 'lighter' } },
         'Hi, my name is ean.'
       )
