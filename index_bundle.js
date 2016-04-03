@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c0a16f5a377f8761221a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "31d0d2820f8564874d06"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27679,12 +27679,15 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { style: {
-	            width: 500,
-	            height: 500,
-	            border: '1px dashed white',
-	            wordWrap: 'break-word'
+	            width: 1500,
+	            height: 200
 	          } },
-	        _react2.default.createElement(_Laramir2.default, null)
+	        _react2.default.createElement(_Laramir2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          { style: { float: 'right', fontSize: '100px', fontFamily: 'sans-serif', fontWeight: 'lighter' } },
+	          'Hi, my name is ean.'
+	        )
 	      );
 	    }
 	  }]);
@@ -27707,7 +27710,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _dec, _desc, _value, _class;
+	var _class;
 
 	var _react = __webpack_require__(77);
 
@@ -27725,87 +27728,107 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-	  var desc = {};
-	  Object['ke' + 'ys'](descriptor).forEach(function (key) {
-	    desc[key] = descriptor[key];
-	  });
-	  desc.enumerable = !!desc.enumerable;
-	  desc.configurable = !!desc.configurable;
+	var MyComponent = (0, _reactKeydown2.default)(_class = function (_React$Component) {
+	  _inherits(MyComponent, _React$Component);
 
-	  if ('value' in desc || desc.initializer) {
-	    desc.writable = true;
+	  function MyComponent(props) {
+	    _classCallCheck(this, MyComponent);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(MyComponent).call(this, props));
+
+	    _this.state = {
+	      key: 'n/a',
+	      top: 0,
+	      left: 220,
+	      deg: 0,
+	      color: 'white'
+	    };
+	    return _this;
 	  }
 
-	  desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-	    return decorator(target, property, desc) || desc;
-	  }, desc);
+	  _createClass(MyComponent, [{
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      var event = nextProps.keydown.event;
 
-	  if (context && desc.initializer !== void 0) {
-	    desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-	    desc.initializer = undefined;
-	  }
-
-	  if (desc.initializer === void 0) {
-	    Object['define' + 'Property'](target, property, desc);
-	    desc = null;
-	  }
-
-	  return desc;
-	}
-
-	var Laramir = (_dec = (0, _reactKeydown2.default)('enter'), (_class = function (_React$Component) {
-	  _inherits(Laramir, _React$Component);
-
-	  function Laramir() {
-	    var _Object$getPrototypeO;
-
-	    var _temp, _this, _ret;
-
-	    _classCallCheck(this, Laramir);
-
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
+	      if (event) {
+	        var direction = {
+	          top: this.state.top,
+	          left: this.state.left,
+	          deg: 0
+	        };
+	        if (event.which === 38 && direction.top !== 0) {
+	          direction.top = direction.top - 10;
+	          direction.deg = 0;
+	        } else if (event.which === 40 && direction.top < 471) {
+	          direction.top = direction.top + 10;
+	          direction.deg = 180;
+	        } else if (event.which === 37 && direction.left !== 0) {
+	          direction.left = direction.left - 10;
+	          direction.deg = 270;
+	        } else if (event.which === 39 && direction.left < 461) {
+	          direction.left = direction.left + 10;
+	          direction.deg = 90;
+	        }
+	        this.setState({
+	          key: event.which,
+	          top: direction.top,
+	          left: direction.left
+	        });
+	      }
 	    }
+	  }, {
+	    key: 'fall',
+	    value: function fall() {
+	      var _this2 = this;
 
-	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Laramir)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = {
-	      top: 100,
-	      left: 100
-	    }, _temp), _possibleConstructorReturn(_this, _ret);
-	  }
-
-	  _createClass(Laramir, [{
-	    key: 'handleMovement',
-	    value: function handleMovement(e) {
-	      console.log(e);
+	      setTimeout(function () {
+	        _this2.setState({
+	          top: _this2.state.top + 0.5,
+	          deg: _this2.state.deg + 0.5,
+	          color: '#' + Math.floor(Math.random() * 16777215).toString(16)
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'reset',
+	    value: function reset() {
+	      this.setState({
+	        top: 0
+	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      if (this.state.top < 471) {
+	        this.fall();
+	      }
+	      if (this.state.top > 470) {
+	        this.reset();
+	      }
 	      return _react2.default.createElement(
 	        'div',
 	        {
 	          style: {
-	            height: 50,
-	            width: 50,
-	            borderRadius: '25px',
-	            textAlign: 'center',
-	            backgroundImage: 'radial-gradient(circle closest-side, white, black)',
+	            fontSize: '250px',
 	            position: 'relative',
+	            color: this.state.color,
 	            left: this.state.left,
 	            right: this.state.right,
 	            top: this.state.top,
-	            bottom: this.state.bottom
+	            bottom: this.state.bottom,
+	            transform: 'rotate(' + this.state.deg + 'deg)'
 	          }
 	        },
-	        '@'
+	        '◉'
 	      );
 	    }
 	  }]);
 
-	  return Laramir;
-	}(_react2.default.Component), (_applyDecoratedDescriptor(_class.prototype, 'handleMovement', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'handleMovement'), _class.prototype)), _class));
-	exports.default = Laramir;
+	  return MyComponent;
+	}(_react2.default.Component)) || _class;
+
+	exports.default = MyComponent;
 
 /***/ },
 /* 236 */
