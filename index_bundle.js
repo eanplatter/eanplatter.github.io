@@ -27673,24 +27673,25 @@
 	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Level).apply(this, arguments));
 	  }
 
-	  _createClass(Level, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { style: {
-	            width: 1500,
-	            height: 200
-	          } },
-	        _react2.default.createElement(_Laramir2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          { style: { float: 'right', fontSize: '100px', fontFamily: 'sans-serif', fontWeight: 'lighter' } },
-	          'Hi, my name is ean.'
-	        )
-	      );
-	    }
-	  }]);
+_createClass(Level, [{
+  key: 'render',
+  value: function render() {
+    return _react2.default.createElement(
+      'div',
+      { style: {
+          width: 1500,
+          height: 200
+        } },
+      _react2.default.createElement(_Laramir2.default, null),
+      _react2.default.createElement(
+        'div',
+        { className: 'wizard' },
+        { style: { float: 'right', fontSize: '100px', fontFamily: 'sans-serif', fontWeight: 'lighter' } },
+        'Hi, my name is ean.'
+      )
+    );
+  }
+}]);
 
 	  return Level;
 	}(_react2.default.Component);
