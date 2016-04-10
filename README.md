@@ -1,1 +1,1 @@
-# eanplatter.github.io!
+# eanplatter.github.io
